@@ -1,0 +1,194 @@
+body {
+	margin: 0;
+	padding: 0;
+	background-color: transparent;
+	overflow: hidden;
+	display: none;
+}
+
+#divbg {
+	width: 300px;
+	height: 300px;
+	background-color: #d6d6d6;
+
+	position: absolute;
+	top:0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	
+	margin: auto;
+	z-index:-1;
+}
+
+#svg_container {
+	margin: 0 auto;
+	height: 400px;
+	width: 19vw;
+	position: absolute;
+	overflow: hidden;
+    background-color: rgba(107,107,107, 0.7);
+	top: calc(50% - 200px);
+	right: 75px;
+	filter:blur(10);
+}
+
+#scene {
+	position: absolute;
+	width: 300px;
+	top: calc(50% - 150px);
+	left: calc(50% - 150px);
+	
+}
+
+.scene-exit {
+	animation-name: sceneExit_kf;
+	animation-duration: 1s;
+	animation-timing-function: ease-in;
+	animation-fill-mode: forwards;
+}
+
+@keyframes sceneExit_kf {
+	0% {
+	}
+
+	25% {
+	transform: scale(.5);
+	}
+
+	50% {
+	transform: scale(.5);
+	}
+
+	75% {
+	transform: scale(.5) translateX(-150vw);
+	}
+
+	100% {
+	transform: scale(.5) translateX(-150vw);
+	}
+}
+
+.scene-enter {
+	animation-name: sceneEnter_kf;
+	animation-duration: 1s;
+	animation-timing-function: ease-in;
+	animation-fill-mode: forwards;
+}
+
+@keyframes sceneEnter_kf {
+	0% {
+	transform: scale(.5) translateX(150vw);
+	}
+
+	25% {
+	transform: scale(.5) translateX(150vw);
+	}
+
+	50% {
+	transform: scale(.5) translateX(150vw);
+	}
+
+	75% { 
+	transform: scale(.5) translateX(0);
+	}
+
+	100% {
+	transform: scale(1);
+	}
+}
+
+.shake {
+	animation-name: shake_kf;
+	animation-duration: .1s;
+	animation-timing-function: ease-in;
+	animation-fill-mode: forwards;
+}
+
+@keyframes shake_kf {
+	0% {
+		transform: rotate(0deg);
+	}
+
+	25% {
+		transform: rotate(1deg);
+	}
+
+	50% {
+		transform: rotate(-1deg);
+	}
+
+	75% { 
+		transform: rotate(1deg);
+	}
+
+	100% {
+		transform: rotate(0deg);
+	}
+}
+#red {
+	opacity: 0;
+	transition: opacity 0.1s linear;
+}
+
+#green {
+	opacity: 0;
+}
+
+#wires path {
+	display: none;
+  z-index: 999;
+}
+
+#wire-shadow g {
+	display: none;
+	opacity: 0.8;
+  z-index: 999;
+}
+
+#countdown {
+	text-align: center;
+	padding-top: 190px;
+	padding-left: 240px;
+	z-index: 1000;
+	color: #ff0000;
+}
+#p1 {
+	text-align: center;
+	padding-top: 50px;
+	z-index: 1000;
+	color: #0077ff;
+}
+#dead {
+	display: none;
+	position: fixed;
+	z-index: 1000;
+	width: 100vw;
+	height: 100vh;
+	background-color: rgb(126, 30, 30);
+	opacity: 0; 
+	transition: opacity 2s ease-in-out;
+}
+
+.dead_color {
+	opacity: 1 !important;
+}
+
+#try_again {
+	height: 50px;
+	width: 30%;
+	margin: 110px 35%;
+
+}
+
+p {
+	margin: 0 auto;
+	width: 300px;
+	padding: 5px;
+}
+
+#cursor {
+	position: absolute;
+	z-index: 999999;
+	display: none;
+}

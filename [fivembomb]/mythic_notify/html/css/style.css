@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+body {
+    background-color: transparent !important;
+    overflow: hidden; /* Hide scrollbars */
+}
+
+
+
+
+
+@keyframes slideInRight {
+    from {
+      -webkit-transform: translate3d(100%, 0, 0);
+      transform: translate3d(100%, 0, 0);
+      visibility: visible;
+    }
+  
+    to {
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 0;
+  }
+  * .container {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    width: 300px;
+  }
+  .notification {
+    animation-name: slideInRight;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    max-width: 300px;
+    width: 100%;
+    border-radius: 6px;
+    box-shadow: 0.0625rem 0.0625rem 0.0925rem #2d794b;
+    padding: 15px;
+    margin: 10px auto;
+    position: relative;
+  }
+  .notification .notification-close {
+      
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 12px;
+    border-radius: 50px;
+    width: 18px;
+    height: 18px;
+    line-height: 15px;
+    text-align: center;
+  }
+  .notification .notification-title,
+  .notification .notification-message {
+    color: #fff;
+    font-family: 'Open Sans', sans-serif;
+  }
+  .notification .notification-title {
+    font-size: 12px;
+    font-weight: 600;
+  }
+  .notification .notification-message {
+    font-weight: 400;
+    font-size: 10px;
+  }
+  .success {
+    background: #5ed490;
+  }
+  .success .notification-close {
+    border: 1px solid #2d794b;
+    color: #2d794b;
+  }
+  .error {
+    background: #f56668;
+  }
+  .error .notification-close {
+    border: 1px solid #ba4849;
+    color: #ba4849;
+  }
+  .inform {
+    background: #2a7ac0;
+  }
+  .inform .notification-close {
+    border: 1px solid #08345b;
+  }
+  .danger {
+    background: #e5a300;
+  }
+  .danger .notification-close {
+    border: 1px solid #996d00;
+  }
+  
+
+/* .template, .notification {
+    display: none;
+    font-family: 'Poppins', sans-serif;
+} */
+
+
+
+.notif-container {
+    margin-top: 10px;
+    width: 20%; 
+    position: absolute;
+
+    right: 2%; 
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+}
+
+/* .notifheader {
+    margin-top: -1%;
+    font: caption;
+    font-size: 17px;
+    font-weight: bold;
+} */
+
+/* .notification {
+    animation-name: slideInRight;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    width: 375px;
+    height: auto;
+    padding: 10px;
+    padding-bottom: 0px;
+    margin-top: -1px;
+    font-family: 'Poppins', sans-serif;
+    margin: 5px;
+    font: caption;
+    font-size: 14px;
+}
+
+.success {
+    background-color: rgba(0, 255, 0, 0.5);
+    box-shadow: -4px 0px 0px 0px rgb(0, 255, 0) inset;
+    color: #ffffff;
+}
+
+.inform {
+    background-color: rgba(49, 108, 163, 0.5);
+    box-shadow: -4px 0px 0px 0px rgb(0, 183, 255) inset;
+    color: #ffffff;
+}
+
+.error {
+    background-color: rgba(255, 0, 0, 0.5);
+    box-shadow: -4px 0px 0px 0px rgb(255, 0, 0) inset;
+    color: #ffffff;
+} */

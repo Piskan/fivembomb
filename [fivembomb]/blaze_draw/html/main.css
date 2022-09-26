@@ -1,0 +1,85 @@
+
+
+:root {
+
+  --text-size: 12px;
+  --colour-inform: #03a9f4;
+  --colour-error: #f44336;
+  --colour-success: #4caf50;
+}
+
+#interaction-holder {
+  max-width: 200px;
+  padding: 15px;
+  border-radius: 2px;
+  position: absolute;
+  display: none;
+}
+
+#interaction-text {
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: var(--text-size);
+  font-weight: bold;
+  /* text-shadow: 2px 2px rgba(0, 0, 0, 0.5); */
+}
+
+.inform {
+  background: var(--colour-inform);
+}
+
+.error {
+  background: var(--colour-error);
+}
+
+.success {
+  background: var(--colour-success);
+}
+
+.position-left {
+  top: 50%;
+  transform: translate(0%, -50%);
+}
+
+.position-right {
+  right: 1%;
+  top: 50%;
+  transform: translate(0%, -50%);
+}
+
+.position-bottom {
+  bottom: 0%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.position-top {
+  top: 5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+@keyframes fadeInRight {
+  from {
+    transform: translateX(-50px);
+    opacity: 0;
+}
+  to {
+    transform: translateX(0);
+    opacity: 1;
+}
+}
+
+
+@keyframes fadeInLeft {
+  from {
+     transform: translateX(1px);
+     opacity: 1;
+  }
+  to {
+     transform: translateX(-50px);
+     opacity: 0;
+  }
+}
+
+
+
